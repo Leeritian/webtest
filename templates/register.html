@@ -1,0 +1,31 @@
+<html lang="zh-CN">
+	<head>
+		<title>注册</title>
+		<style type="text/css">
+			#pwcwrong{display: none}
+		</style>
+		<script>
+			function checkForm()
+				{	
+					var ppwc = document.getElementById('pwc').value
+					var ppwd = document.getElementById('password').value
+					aalert = document.getElementById("pwcwrong")
+					if (ppwc==ppwd){aalert.style.display="none";return true;}
+					else{aalert.style.display="block";return false;}
+				}
+		</script>
+		<meta charset="utf-8">
+
+	</head>
+	<body>
+	<div class="register">
+		<form action="register" method="POST" enctype="multipart/form-data">
+			昵称		<input type="text" id="name" name="name"></input><br></br>
+			帐号		<input type="text" id="account" name="account"></input><br></br>
+			密码		<input type="password" id="password" name="password"></input><br></br>
+			确认密码	<input type="password" id="pwc" name="pwc" onblur="checkForm()"><span id="pwcwrong">两次密码不一样！！！</span></input><br></br>
+			<input type="submit"></input>
+		</form>
+	</div>
+	</body>
+</html>

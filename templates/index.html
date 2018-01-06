@@ -1,0 +1,9 @@
+<html>
+	<head></head>
+	<body>
+		<a href="/login">登录</a>
+		<a href="/logout">登出</a>
+
+		<h1>Welcome you {% if request.cookies.get('account') %}{{request.cookies.get('account')}}{% else %}nobody{% endif %}</h1>
+	</body>
+</html>
